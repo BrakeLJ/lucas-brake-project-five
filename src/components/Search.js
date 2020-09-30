@@ -1,41 +1,51 @@
-import React from "react";
-import axios from "axios";
+import React, { Component } from "react";
 
-const Search = () => {
+class Search extends Component {
+  constructor() {
+    super();
+    this.state = {
+      userInput: '',
+    };
+  }
+    // Call to the Marvel API to get hero data when submit button clicked
+  
 
-    // Call to the Marvel API to get hero data using user input 
-    getHeroes = () => {
-        axios({
-            method: 'GET',
-            url: 'http://gateway.marvel.com/v1/public/characters',
-            dataResponse: 'json',
-            params: {
-                // nameStartsWith: VALUEFROM-USER,
-                ts: '',
-                apikey: '',
-                hash: ''
-            },
-        }).then(results => {
-            results = results.data.results;
-            this.setState({
-                heroes: results,
-                // loading state?
-            })
-        })
-    }
+  handleChange = (e) => {
+      this.setState({
+      userInput: e.target.value,
+      })
+  }
 
+  render() {
     return (
-        <>
-            <fieldset>
-                <legend className="sr-only">Hero search field</legend>
-                <form action="">
-                    <label htmlFor="search" for>Search for a hero</label>
-                    <input type="search" name="search" id="search"/>
-                    <input onClick={getHeroes} type="submit" value="Assemble!"/>
-                </form>
-            </fieldset>
-        </>
+    <>
+      <div className="wrapper">
+        <fieldset>
+          <legend className="sr-only">Hero search field</legend>
+          <form className="form">
+          <label htmlFor="search">Search for a hero</label>
+          <input 
+          className="form__input"
+          onChange={this.handleChange} 
+          type="search" 
+          name="search" 
+          id="search" 
+          value={this.state.userInput} />
+          <button 
+          className="form__btn btn"
+          onClick={(e) => this.props.getHeroes(e, this.state.userInput)} 
+          type="submit" 
+          >Assemble!</button>
+        </form>
+        </fieldset>
+      </div>
+    </>
     );
+  }
+
 };
 
 export default Search;
+
+
+
