@@ -25,6 +25,7 @@ html {
 body {
   color: var(--dark);
   font-family: var(--body-font);
+  font-size: 1.8rem; /*Fallback for older browsers */
   font-size: clamp(1.6rem, 1.1vw, 2rem);
   line-height: 1.4;
 
@@ -58,13 +59,10 @@ a {
   transition: all .2s ease-in;
   display: inline-block;
   color: black;
-  font-weight: bold;
   text-transform: uppercase;
   border: 2px solid var(--dark);
-  padding: 7px 10px;
+  padding: 5px 10px;
   cursor: pointer;
-  font-family: inherit;
-  /* transform: skew(-15deg); */
 }
 
 .btn:hover {
@@ -92,6 +90,7 @@ Header Style
 
 h1 {
   text-align: center;
+  font-size: 6rem; /*Fallback for older browsers */
   font-size: clamp(5rem, 3vw, 8rem)
 }
 
@@ -109,10 +108,9 @@ fieldset {
 
 .form__input {
   border: 2px solid var(--dark);
-  margin-left: 20px;
-  /* padding: 7px 0px; */
-  height: 30px;
-
+  margin: 0px 20px;
+  padding: 7px 0px;
+  height: 35px;
 }
 
 /*=========================================
@@ -130,13 +128,18 @@ Result Style
 .hero-result__card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--dark);
+  border: 2px solid var(--primary);
+  width: 30%; /*Fallback for older browsers */
   width: clamp(200px, 30% - 50px, 400px);
   margin: 25px;
 }
 
 .hero-result__text {
   padding: 0px 10px
+}
+
+.hero-result__link {
+  color: var(--primary)
 }
 
 /*=========================================
@@ -159,10 +162,23 @@ Footer Style
 
 .socials a {
   padding: 0px 10px;
+  font-size: 2.2rem; /*Fallback for older browsers */
   font-size: clamp(2rem, 1.3vw, 2.4rem);
 }
 
 a:hover,
 a:focus {
   color: var(--primary);
+}
+
+/*=========================================
+Media Queries 
+=========================================*/
+
+@media (max-width: 600px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

@@ -43,38 +43,12 @@ class App extends Component {
     })
   }
 
-    // handleChange = (e) => {
-    //   this.setState({
-    //     userInput: e.target.value,
-    //   })
-    // }
-  
-
   render() {
     return (
       <div className="app">
         <Header />
         <Search getHeroes={this.getHeroes}/>
         <div className="wrapper">
-          {/* <fieldset>
-            <legend className="sr-only">Hero search field</legend>
-            <form className="form">
-                <label htmlFor="search">Search for a hero</label>
-                <input 
-                className="form__input"
-                onChange={this.handleChange} 
-                type="search" 
-                name="search" 
-                id="search" 
-                value={this.state.userInput} />
-                <button 
-                className="form__btn btn"
-                onClick={this.getHeroes} 
-                type="submit" 
-                >Assemble!</button>
-            </form>
-          </fieldset> */}
-  
           <ul className="hero-result">
             {this.state.heroes.map((hero) => {
               return(
@@ -84,14 +58,7 @@ class App extends Component {
                     <h2>{hero.name}</h2>
                     <span># of Comics: {hero.comics.available}</span>
                     <p>{hero.description}</p>
-                    <h3>Events</h3>
-                    <ul>{hero.events.items.map((event) => {
-                      return (
-                        <li key={event.name}>{event.name}</li>
-                      )
-                    })}
-                    <a href={hero.urls[1].url}>Learn More</a>
-                    </ul>
+                    <a className="hero-result__link" href={hero.urls[1].url}>Learn More</a>
                   </div>
                 </li>
               )
@@ -103,5 +70,13 @@ class App extends Component {
     );
   }
 }
+
+{/* <ul>{hero.events.items.map((event) => {
+                      return (
+                        <li key={event.name}>{event.name}</li>
+                      )
+                    })}
+                    
+                    </ul> */}
 
 export default App;
