@@ -58,7 +58,9 @@ class App extends Component {
                   <div className="hero-result__text-box">
                     <h2>{hero.name}</h2>
                     <span className="hero-result__comics"># of comics hero appears in: {hero.comics.available}</span>
-                    <p className="hero-result__description">{hero.description}</p>
+                    {hero.description === "" 
+                      ? <p>Hmm, our records seem to be incomplete for this hero. Try the "Learn More" link for the official Marvel hero page.</p> 
+                      : <p className="hero-result__description">{hero.description}</p>}
                     <a className="hero-result__link" href={hero.urls[1].url}>Learn More</a>
                   </div>
                 </li>
