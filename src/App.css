@@ -27,7 +27,6 @@ body {
   font-size: 1.8rem; /*Fallback for older browsers */
   font-size: clamp(1.6rem, 1.1vw, 2rem);
   line-height: 1.4;
-
 }
 
 h1, h2, h3 {
@@ -47,21 +46,23 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: var(--light);
+  text-decoration: none;
   transition: all .5s;
-
 }
 
 .btn {
-  background: transparent;
-  transition: all .2s ease-in;
   display: inline-block;
-  color: black;
-  text-transform: uppercase;
+
   border: 2px solid var(--dark);
   padding: 5px 10px;
+
+  background: transparent;
+  color: black;
+  text-transform: uppercase;
+  
   cursor: pointer;
+  transition: all .2s ease-in;
 }
 
 .btn:hover,
@@ -81,11 +82,13 @@ Header Style
 =========================================*/
 
 .header {
-  background: linear-gradient(var(--overlay)), url(./assets/marvel-banner.jpg) no-repeat scroll center /cover;
-  min-height: 45vh;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  min-height: 45vh;
+
+  background: linear-gradient(var(--overlay)), url(./assets/marvel-banner.jpg) no-repeat scroll center /cover;  
 }
 
 h1 {
@@ -134,10 +137,12 @@ Result Style
 .hero-result__card {
   display: flex;
   flex-direction: column;
+
   border: 2px solid var(--primary);
   width: 30%; /*Fallback for older browsers */
   width: clamp(200px, 30% - 50px, 400px);
   margin: 25px;
+
   background: var(--light);
 }
 
@@ -179,9 +184,9 @@ Footer Style
 =========================================*/
 
 .footer {
+  padding: 10px 0px;
   background: var(--dark);
   color: var(--light);
-  padding: 10px 0px;
 }
 .footer__flex {
   display: flex;
