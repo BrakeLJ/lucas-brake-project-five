@@ -65,7 +65,8 @@ a {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   border: 2px solid var(--primary);
   background: var(--primary);
   color: white;
@@ -89,9 +90,11 @@ Header Style
 }
 
 h1 {
+  color: var(--light);
   text-align: center;
-  font-size: 6rem; /*Fallback for older browsers */
-  font-size: clamp(5rem, 3vw, 8rem)
+  text-transform: uppercase;
+  font-size: 8rem; /*Fallback for older browsers */
+  font-size: clamp(6rem, 4vw, 10rem)
 }
 
 /*=========================================
@@ -113,6 +116,10 @@ fieldset {
   height: 35px;
 }
 
+.form__input:focus {
+  outline: 2px solid var(--primary);
+}
+
 /*=========================================
 Result Style
 =========================================*/
@@ -122,7 +129,7 @@ Result Style
   flex-wrap: wrap;
   justify-content: center;
 
-  min-height: 40vh;
+  min-height: 35vh;
 }
 
 .hero-result__card {
@@ -132,14 +139,40 @@ Result Style
   width: 30%; /*Fallback for older browsers */
   width: clamp(200px, 30% - 50px, 400px);
   margin: 25px;
+  background: var(--light);
 }
 
-.hero-result__text {
-  padding: 0px 10px
+img {
+  border-bottom: 1px solid black;
+}
+
+.hero-result__text-box {
+  padding: 0px 10px;
+}
+
+h2 {
+  margin: 10px 0px;
+}
+
+.hero-result__comics {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.hero-result__description {
+  margin-bottom: 10px;
 }
 
 .hero-result__link {
-  color: var(--primary)
+  display: inline-block ;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.hero-result__link:hover,
+.hero-result__link:focus {
+  color: var(--primary-shade);
+  font-weight: bold;
 }
 
 /*=========================================
@@ -180,5 +213,18 @@ Media Queries
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .form__input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-result__card {
+    width: 100%;
   }
 }
