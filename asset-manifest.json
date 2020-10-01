@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/lucas-brake-project-five/static/css/main.82d7f986.chunk.css",
+    "main.css": "/lucas-brake-project-five/static/css/main.cafc47be.chunk.css",
     "main.js": "/lucas-brake-project-five/static/js/main.aa556e4a.chunk.js",
     "main.js.map": "/lucas-brake-project-five/static/js/main.aa556e4a.chunk.js.map",
     "runtime-main.js": "/lucas-brake-project-five/static/js/runtime-main.b19370d3.js",
@@ -8,16 +8,16 @@
     "static/js/2.611774b7.chunk.js": "/lucas-brake-project-five/static/js/2.611774b7.chunk.js",
     "static/js/2.611774b7.chunk.js.map": "/lucas-brake-project-five/static/js/2.611774b7.chunk.js.map",
     "index.html": "/lucas-brake-project-five/index.html",
-    "precache-manifest.d643c25609a1e2741ac913eb14d49d36.js": "/lucas-brake-project-five/precache-manifest.d643c25609a1e2741ac913eb14d49d36.js",
+    "precache-manifest.2cc65e1157755591a843badb1336c42b.js": "/lucas-brake-project-five/precache-manifest.2cc65e1157755591a843badb1336c42b.js",
     "service-worker.js": "/lucas-brake-project-five/service-worker.js",
-    "static/css/main.82d7f986.chunk.css.map": "/lucas-brake-project-five/static/css/main.82d7f986.chunk.css.map",
+    "static/css/main.cafc47be.chunk.css.map": "/lucas-brake-project-five/static/css/main.cafc47be.chunk.css.map",
     "static/js/2.611774b7.chunk.js.LICENSE.txt": "/lucas-brake-project-five/static/js/2.611774b7.chunk.js.LICENSE.txt",
     "static/media/App.css": "/lucas-brake-project-five/static/media/marvel-banner.7e490caa.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.b19370d3.js",
     "static/js/2.611774b7.chunk.js",
-    "static/css/main.82d7f986.chunk.css",
+    "static/css/main.cafc47be.chunk.css",
     "static/js/main.aa556e4a.chunk.js"
   ]
 }
